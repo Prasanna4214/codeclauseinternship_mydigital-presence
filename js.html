@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <script>
+// DOM elements
+const addButton = document.getElementById('add-section');
+const removeButton = document.getElementById('remove-section');
+const previewDiv = document.getElementById('resume-preview');
+
+// Event listeners
+addButton.addEventListener('click', addResumeSection);
+removeButton.addEventListener('click', removeResumeSection);
+
+// Function to add a new resume section
+function addResumeSection() {
+    const newSection = document.createElement('section');
+    newSection.innerHTML = `
+        <h2>New Section</h2>
+        <div class="form-group">
+            <label for="section-title">Section Title</label>
+            <input type="text" id="section-title" name="section-title" placeholder="Section Title">
+        </div>
+        <div class="form-group">
+            <label for="section-content">Section Content</label>
+            <textarea id="section-content" name="section-content" placeholder="Section Content" rows="4"></textarea>
+        </div>
+    `;
+    previewDiv.appendChild(newSection);
+}
+
+// Function to remove the last added resume section
+function removeResumeSection() {
+    const lastSection = previewDiv.lastElementChild;
+    if (lastSection.id !== 'preview') {
+        previewDiv.removeChild(lastSection);
+    }
+}
+</script>
+</head>
+</body>
+</html>

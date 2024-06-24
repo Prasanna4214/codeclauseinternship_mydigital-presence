@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS styles here */
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: hsl(94, 70%, 61%);
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: hsl(181, 69%, 81%);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], input[type="tel"], textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #buttons {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #buttons button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        #resume-preview {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        footer p {
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Interactive Resume Builder</h1>
+        </header>
+        <main>
+            <section id="personal-info">
+                <h2>Personal Information</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number">
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="form-group">
+                    <label for="degree">Degree</label>
+                    <input type="text" id="degree" name="degree" placeholder="Your Degree">
+                </div>
+                <div class="form-group">
+                    <label for="university">University</label>
+                    <input type="text" id="university" name="university" placeholder="University Name">
+                </div>
+                <div class="form-group">
+                    <label for="grad-year">Graduation Year</label>
+                    <input type="text" id="grad-year" name="grad-year" placeholder="Graduation Year">
+                </div>
+            </section>
+
+            <section id="experience">
+                <h2>Experience</h2>
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" name="job-title" placeholder="Job Title">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Company Name">
+                </div>
+                <div class="form-group">
+                    <label for="exp-years">Years of Experience</label>
+                    <input type="text" id="exp-years" name="exp-years" placeholder="Years of Experience">
+                </div>
+            </section>
+
+            <div id="buttons">
+                <button id="add-section">Add Section</button>
+                <button id="remove-section">Remove Section</button>
+            </div>
+
+            <section id="preview">
+                <h2>Preview</h2>
+                <div id="resume-preview">
+                    <!-- Preview content will be dynamically added here -->
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Interactive Resume Builder. All rights reserved.</p>
+        </footer>
+    </div>
+    <script src="js.html"></script>
+</body>
+</html>
